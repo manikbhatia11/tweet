@@ -81,10 +81,20 @@ WSGI_APPLICATION = 'django_forum.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'df7po4b6843r4c',
+        'USER': 'airusbvoiowpaw',
+        'HOST': 'ec2-107-23-143-66.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'PASSWORD': '31375435fc1d13f9f3bc68a1af6229f0462410a55225da2310a9136d02a0c745',
     }
 }
 
@@ -128,10 +138,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
-
 cloudinary.config(
     cloud_name="dpk1ptxun",
     api_key="795154494743893",
@@ -141,5 +147,10 @@ cloudinary.config(
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
